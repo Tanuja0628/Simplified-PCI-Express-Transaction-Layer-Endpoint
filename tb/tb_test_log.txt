@@ -1,0 +1,720 @@
+
+1. Reset test 
+
+[2026-08-01 13:07:48 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=reset_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:07:48 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[reset_test] START
+[sb] requests=0 accepted=0 completions=0 pass=0 busy_ignored=0 unsupported=0 resets=3 errors=0 outstanding=0
+[cov] coverage request=0.00 completion=0.00 bus=66.67 total=22.22
+[reset_test] PASS
+Simulation complete via $finish(1) at time 205 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:07:50 EDT  (total: 00:00:02)
+Done
+
+2. Sanity Test
+
+[2026-08-01 13:06:24 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=sanity_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:06:24 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[sanity_test] START
+[sb] requests=3 accepted=3 completions=2 pass=2 busy_ignored=0 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=46.09 completion=43.00 bus=91.67 total=60.25
+[sanity_test] PASS
+Simulation complete via $finish(1) at time 265 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:06:26 EDT  (total: 00:00:02)
+Finding VCD file...
+./dump.vcd
+[2026-08-01 13:06:26 UTC] Opening EPWave...
+Done
+
+3. Smoke_test
+
+[2026-08-01 13:09:26 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=smoke_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:09:26 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[smoke_test] START
+[sb] requests=5 accepted=5 completions=3 pass=3 busy_ignored=0 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=52.27 completion=45.50 bus=91.67 total=63.15
+[smoke_test] PASS
+Simulation complete via $finish(1) at time 355 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:09:28 EDT  (total: 00:00:02)
+Done
+
+4. Memory_write_test 
+
+[2026-08-01 13:10:19 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=memory_write_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:10:19 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[memory_write_test] START
+[sb] requests=10 accepted=10 completions=5 pass=5 busy_ignored=0 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=45.91 completion=64.00 bus=91.67 total=67.19
+[memory_write_test] PASS
+Simulation complete via $finish(1) at time 535 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:10:21 EDT  (total: 00:00:02)
+Done
+
+5. Memory_read_test 
+
+[2026-08-01 13:11:30 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=memory_read_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:11:30 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[memory_read_test] START
+[sb] requests=4 accepted=4 completions=4 pass=4 busy_ignored=0 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=32.37 completion=45.50 bus=91.67 total=56.51
+[memory_read_test] PASS
+Simulation complete via $finish(1) at time 335 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:11:32 EDT  (total: 00:00:02)
+Done
+
+6. Configuration_read_test 
+
+[2026-08-01 13:12:21 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=configuration_read_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:12:21 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[configuration_read_test] START
+[sb] requests=5 accepted=5 completions=5 pass=5 busy_ignored=0 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=34.69 completion=54.50 bus=91.67 total=60.29
+[configuration_read_test] PASS
+Simulation complete via $finish(1) at time 385 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:12:23 EDT  (total: 00:00:02)
+Done
+
+7.Configuration_write_test 
+
+[2026-08-01 13:13:09 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=configuration_write_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:13:10 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[configuration_write_test] START
+[sb] requests=6 accepted=6 completions=3 pass=3 busy_ignored=0 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=44.54 completion=45.50 bus=91.67 total=60.57
+[configuration_write_test] PASS
+Simulation complete via $finish(1) at time 375 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:13:12 EDT  (total: 00:00:02)
+Done
+
+8.Completion_validation_test 
+
+[2026-08-01 13:14:36 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=completion_validation_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:14:36 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[completion_validation_test] START
+[sb] requests=8 accepted=8 completions=5 pass=5 busy_ignored=0 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=53.46 completion=71.00 bus=91.67 total=72.04
+[completion_validation_test] PASS
+Simulation complete via $finish(1) at time 475 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:14:38 EDT  (total: 00:00:02)
+Done
+
+9. Mixed_memory_config_test 
+
+[2026-08-01 13:15:31 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=mixed_memory_config_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:15:31 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[mixed_memory_config_test] START
+[sb] requests=10 accepted=10 completions=6 pass=6 busy_ignored=0 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=56.63 completion=53.00 bus=91.67 total=67.10
+[mixed_memory_config_test] PASS
+Simulation complete via $finish(1) at time 555 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:15:33 EDT  (total: 00:00:02)
+Done
+
+10. Negative_test 
+
+[2026-08-01 13:16:14 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=negative_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:16:15 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[negative_test] START
+[sb] requests=38 accepted=12 completions=9 pass=9 busy_ignored=1 unsupported=25 resets=1 errors=0 outstanding=0
+[cov] coverage request=69.82 completion=52.00 bus=95.83 total=72.55
+[negative_test] PASS
+Simulation complete via $finish(1) at time 1055 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:16:17 EDT  (total: 00:00:02)
+Done
+
+11. Constrained_random_test
+
+[2026-08-01 13:17:10 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=constrained_random_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:17:10 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[constrained_random_test] START
+[sb] requests=2531 accepted=1262 completions=491 pass=491 busy_ignored=1269 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=81.11 completion=87.50 bus=95.83 total=88.15
+[constrained_random_test] PASS
+Simulation complete via $finish(1) at time 96775 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:17:13 EDT  (total: 00:00:03)
+Done
+
+12. Back_to_back_test
+
+[2026-08-01 13:20:59 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=back_to_back_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:20:59 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[back_to_back_test] START
+[sb] requests=1258 accepted=632 completions=235 pass=235 busy_ignored=626 unsupported=0 resets=1 errors=0 outstanding=0
+[cov] coverage request=80.93 completion=87.50 bus=95.83 total=88.09
+[back_to_back_test] PASS
+Simulation complete via $finish(1) at time 22465 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:21:01 EDT  (total: 00:00:02)
+Done
+
+13. Stress_1000_test 
+
+[2026-08-01 13:21:51 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=stress_1000_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:21:52 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[stress_1000_test] START
+[sb] requests=2532 accepted=1223 completions=527 pass=527 busy_ignored=1278 unsupported=31 resets=1 errors=0 outstanding=0
+[cov] coverage request=89.25 completion=87.50 bus=95.83 total=90.86
+[stress_1000_test] PASS
+Simulation complete via $finish(1) at time 72685 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:21:54 EDT  (total: 00:00:02)
+Done
+
+14. Stress_5000_test
+
+[2026-08-01 13:22:54 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=stress_5000_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:22:55 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[stress_5000_test] START
+[sb] requests=12516 accepted=6194 completions=2488 pass=2488 busy_ignored=6214 unsupported=108 resets=1 errors=0 outstanding=0
+[cov] coverage request=89.97 completion=87.50 bus=95.83 total=91.10
+[stress_5000_test] PASS
+Simulation complete via $finish(1) at time 293775 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:22:58 EDT  (total: 00:00:03)
+Done
+
+15. Stress_10000_test 
+
+[2026-08-01 13:32:30 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=stress_10000_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:32:31 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[stress_10000_test] START
+[sb] requests=25040 accepted=12341 completions=5012 pass=5012 busy_ignored=12426 unsupported=273 resets=1 errors=0 outstanding=0
+[cov] coverage request=90.15 completion=87.50 bus=95.83 total=91.16
+[stress_10000_test] PASS
+Simulation complete via $finish(1) at time 480515 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:32:34 EDT  (total: 00:00:03)
+Done
+
+16. Random_reset_stress_test 
+
+[2026-08-01 13:33:35 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=random_reset_stress_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:33:35 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[random_reset_stress_test] START
+[sb] requests=2526 accepted=1250 completions=498 pass=498 busy_ignored=1276 unsupported=0 resets=11 errors=0 outstanding=0
+[cov] coverage request=80.93 completion=83.50 bus=95.83 total=86.75
+[random_reset_stress_test] PASS
+Simulation complete via $finish(1) at time 55745 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:33:38 EDT  (total: 00:00:03)
+Done
+
+17. Long_duration_test 
+
+[2026-08-01 13:34:31 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=long_duration_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:34:31 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2239, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[long_duration_test] START
+[sb] requests=30056 accepted=14827 completions=5975 pass=5975 busy_ignored=14916 unsupported=313 resets=1 errors=0 outstanding=0
+[cov] coverage request=90.15 completion=87.50 bus=95.83 total=91.16
+[long_duration_test] PASS
+Simulation complete via $finish(1) at time 1504095 NS + 0
+./testbench.sv:2250         $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:34:36 EDT  (total: 00:00:05)
+Done
+
+18. Regression_test
+
+[2026-08-01 13:30:05 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-coverage' 'all' '-covoverwrite' '+TESTNAME=regression_test' '+WAVES' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Aug 01, 2026 at 09:30:05 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+	Top level design units:
+		$unit_0x67f934e9
+		pcie_tl_pkg
+		pcie_tl_tb_top
+Loading snapshot worklib.pcie_tl_tb_top:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testbench.sv, line = 2379, pos = 20
+           Scope: pcie_tl_tb_top
+            Time: 0 FS + 0
+
+[regression_test] START
+xmsim: *E,ERRSEV (./testbench.sv,1488): (time 24215 NS).
+pcie_tl_pkg::pcie_tl_env.wait_for_drain
+[regression_test_env] Environment drain timed out
+xmsim: *E,ERRSEV (./testbench.sv,1488): (time 44275 NS).
+pcie_tl_pkg::pcie_tl_env.wait_for_drain
+[regression_test_env] Environment drain timed out
+xmsim: *E,ERRSEV (./testbench.sv,1488): (time 64335 NS).
+pcie_tl_pkg::pcie_tl_env.wait_for_drain
+[regression_test_env] Environment drain timed out
+xmsim: *E,ERRSEV (./testbench.sv,1488): (time 114395 NS).
+pcie_tl_pkg::pcie_tl_env.wait_for_drain
+[regression_test_env] Environment drain timed out
+[sb] requests=3510 accepted=1783 completions=761 pass=761 busy_ignored=1704 unsupported=23 resets=13 errors=0 outstanding=1
+[cov] coverage request=89.79 completion=87.50 bus=95.83 total=91.04
+xmsim: *F,FATSEV (./testbench.sv,1539): (time 114395 NS).
+pcie_tl_pkg::pcie_tl_base_test.run
+[regression_test] FAIL
+Simulation terminated via $fatal(1) at time 114395 NS + 7
+./testbench.sv:1539             $fatal(1, "[%s] FAIL", name);
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  pcie_tl_tb_top(pcie_tl_tb_top)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_40d224ab_764f0de7.ucm
+  data               :  ./cov_work/scope/test/icc_40d224ab_764f0de7.ucd
+TOOL:	xrun	25.03-s001: Exiting on Aug 01, 2026 at 09:30:08 EDT  (total: 00:00:03)
+Exit code expected: 0, received: 2
+Done
